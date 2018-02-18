@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/customer")
 public class CustomerController {
 
+	//this method trims the leading and trailing blank spaces
 	@InitBinder
 	public void initBinder(WebDataBinder dataBinder)
 	{
