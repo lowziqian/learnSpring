@@ -1,5 +1,7 @@
 package com.learnspring;
 
+import javax.validation.constraints.Max;
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
@@ -10,6 +12,19 @@ public class Customer {
 	@NotNull(message="is required")
 	@Size(min=1, message="is required")
 	private String givenName;
+
+	@Min(value=1, message="must be between 1 and 10")
+	@Max(value=10, message="must be between 1 and 10")
+	private int freePass;
+	
+	
+	public int getFreePass() {
+		return freePass;
+	}
+
+	public void setFreePass(int freePass) {
+		this.freePass = freePass;
+	}
 
 	public String getSurName() {
 		return surName;

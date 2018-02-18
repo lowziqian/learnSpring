@@ -7,5 +7,8 @@
 </head>
 <body>
 
-The Customer name is ${customer.surName} ${customer.givenName}</body>
+The Customer name is ${customer.surName} ${customer.givenName}
+<br></br>
+You have ${customer.freePass} Free Passes.
+</body>
 </html>
