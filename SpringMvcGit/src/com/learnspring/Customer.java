@@ -14,12 +14,16 @@ public class Customer {
 	@Size(min=1, message="is required")
 	private String givenName;
 
+	@NotNull(message="is required")
 	@Min(value=1, message="must be between 1 and 10")
 	@Max(value=10, message="must be between 1 and 10")
-	private int freePass;
+	private Integer freePass;
 	
 	@Pattern(regexp="[a-zA-Z0-9]{6}", message="only 6 digits or characters")
 	private String postalCode;
+	
+		
+	
 	
 	public String getPostalCode() {
 		return postalCode;
@@ -29,11 +33,11 @@ public class Customer {
 		this.postalCode = postalCode;
 	}
 
-	public int getFreePass() {
+	public Integer getFreePass() {
 		return freePass;
 	}
 
-	public void setFreePass(int freePass) {
+	public void setFreePass(Integer freePass) {
 		this.freePass = freePass;
 	}
 
