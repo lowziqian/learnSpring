@@ -6,6 +6,8 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
+import com.learnspring.validation.CourseCode;
+
 public class Customer {
 
 	private String surName;
@@ -21,10 +23,20 @@ public class Customer {
 	
 	@Pattern(regexp="[a-zA-Z0-9]{6}", message="only 6 digits or characters")
 	private String postalCode;
-	
+
+	@CourseCode(value="TOP" , message="must start with TOP")
+	private String courseCode;
 		
 	
 	
+	public String getCourseCode() {
+		return courseCode;
+	}
+
+	public void setCourseCode(String courseCode) {
+		this.courseCode = courseCode;
+	}
+
 	public String getPostalCode() {
 		return postalCode;
 	}

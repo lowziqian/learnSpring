@@ -7,8 +7,8 @@
 </head>
 <body>
 
-The Customer name is ${customer.surName} ${customer.givenName} living at ${customer.postalCode}
+The Customer name is ${customer.surName} ${customer.givenName} <!--  living at ${customer.postalCode} -->
 <br></br>
-You have ${customer.freePass} Free Passes.
+You have ${customer.freePass} Free Passes for CourseCode ${customer.courseCode}
 </body>
 </html>
